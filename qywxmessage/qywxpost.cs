@@ -8,11 +8,8 @@ namespace qywxmessage
 {
     public class easywxpost
     {
-        public static string sendpack(string message)
+        public static string sendpack(string corp_id,string app_secret,string app_id,string message)
         {
-            var corp_id = ""; // Your corp_id
-            var app_secret = ""; // Your app_secret
-            var app_id = ""; // Your app_id
             HttpWebRequest req =  
                 (HttpWebRequest)HttpWebRequest.Create("https://qyapi.weixin.qq.com/cgi-bin/gettoken?corpid="+corp_id+"&corpsecret="+app_secret); 
             req.Method = "GET"; 

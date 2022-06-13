@@ -32,9 +32,11 @@ namespace easyWPFpost
                 str2 = "PowerUser";
                 txb2.Text = str2;
             }
-
+			var corp_id = ""; // Your corp_id
+            var app_secret = ""; // Your app_secret
+            var app_id = ""; // Your app_id
             var strsend = "😁😁😁😁😁!" + str + str2;
-            var resultstr = easywxpost.sendpack(strsend); //send your message
+            var resultstr = easywxpost.sendpack(corp_id,app_secret,app_id,strsend); //send your message
 
             // Show message box when button is clicked.
             MessageBox.Show(resultstr);
